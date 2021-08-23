@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    volumes: ['./database/mariadb:/var/lib/mysql']
+    container_name: todo-database
+    environment:
+      MARIADB_ROOT_PASSWORD: admin
+      MARIADB_DATABASE: todo_app_db
+    ports:
+      - 3306:3306
+    restart: 'no'

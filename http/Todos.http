@@ -1,0 +1,28 @@
+
+###
+GET http://localhost:3000/api/v1/todos HTTP/1.1
+
+###
+POST http://localhost:3000/api/v1/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "task": "teste 4",
+  "isDone": 1
+}
+
+###
+GET http://localhost:3000/api/v1/todos/e71ea6e7-65ad-4a22-8be7-36ec0397c752
+
+
+###
+PUT http://localhost:3000/api/v1/todos/e71ea6e7-65ad-4a22-8be7-36ec0397c752
+Content-Type: application/json
+
+{
+  "task": "task atualizada",
+  "isDone": 1
+}
+
+###
+DELETE http://localhost:3000/api/v1/todos/e71ea6e7-65ad-4a22-8be7-36ec0397c752
