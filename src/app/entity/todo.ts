@@ -28,4 +28,13 @@ export class TodoEntity {
   @DeleteDateColumn({ name: 'deleted_at' })
   @ApiProperty()
   deletetedAt: string;
+
+  constructor(todo?: Partial<TodoEntity>) {
+    this.id = todo?.id;
+    this.task = todo?.task;
+    this.isDone = todo?.isDone;
+    this.createdAt = todo?.createdAt;
+    this.updatedAt = todo?.updatedAt;
+    this.deletetedAt = todo?.deletetedAt;
+  }
 }
